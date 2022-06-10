@@ -49,11 +49,14 @@ function App() {
       {Object.keys(cep).length > 0 && (
         <main className="Main">
           <h2> {cep.cep}</h2>
-          
-          <span> `{cep.logradouro}</span>
-          <span>Complemento: {cep.complemento}</span>
-          <span>{cep.bairro}</span>
-          <span>{cep.localidade} - {cep.uf}</span>
+          <p> <span style={{color: "orange"}}>Logradouro: </span>  {(cep.logradouro.length > 0) ? cep.logradouro : 'Sem Logradouro'}</p>
+          <p>Complemento: {cep.complemento}</p>
+          <p>Bairro: {cep.bairro}</p>
+          <p>Localidade: {cep.localidade} - {cep.uf}</p>
+          <p>IBGE: {cep.ibge}</p>
+          <p>GIA: {cep.gia}</p>
+          <p>DDD: {cep.ddd}</p>
+          <p>Siafi: {cep.siafi}</p>
 
         </main>
       )}  
